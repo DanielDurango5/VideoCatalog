@@ -4,6 +4,6 @@ import artifactId.model.Video;
 import artifactId.model.View;
 
 public interface ViewsRepository {
-    View reproduction(View reproduction);
+    View save(View view);
 }
 
