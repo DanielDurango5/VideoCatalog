@@ -1,6 +1,6 @@
-package artifactId.repository;
+package culturoteca.repository;
 
-import artifactId.model.Video;
+import culturoteca.model.Video;
 
 import java.util.List;
 

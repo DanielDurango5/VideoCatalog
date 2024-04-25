@@ -1,7 +1,7 @@
-package artifactId.repository.impl;
+package culturoteca.repository.impl;
 
-import artifactId.model.View;
-import artifactId.repository.ViewsRepository;
+import culturoteca.model.View;
+import culturoteca.repository.ViewsRepository;
 
 import java.util.ArrayList;
 import java.util.List;

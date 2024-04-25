@@ -1,4 +1,4 @@
-package artifactId.exception;
+package culturoteca.exception;
 
 import java.text.MessageFormat;
 
