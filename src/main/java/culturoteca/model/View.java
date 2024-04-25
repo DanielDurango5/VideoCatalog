@@ -1,4 +1,4 @@
-package artifactId.model;
+package culturoteca.model;
 
 import java.time.LocalDateTime;
 

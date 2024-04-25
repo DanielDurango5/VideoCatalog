@@ -1,7 +1,7 @@
-package artifactId.service;
+package culturoteca.service;
 
-import artifactId.model.Video;
-import artifactId.model.View;
+import culturoteca.model.Video;
+import culturoteca.model.View;
 
 import java.util.List;
 
