@@ -1,7 +1,12 @@
 package culturoteca.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import culturoteca.exception.VideoNotFoundException;
+import culturoteca.repository.impl.ViewsRepositoryImpl;
+import culturoteca.service.CulturotecaService;
+import culturoteca.service.impl.CulturotecaServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,17 +14,17 @@ import culturoteca.model.Video;
 import culturoteca.repository.impl.VideoRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class VideoRepositoryTest {
 
     private VideoRepository videoRepository;
-
     @BeforeEach
-    void init(){
-
+    void init() {
         videoRepository = new VideoRepositoryImpl();
 
-        List<Video> videos = List.of(new Video("01", "Título 1", "----", 4.5),
+        List<Video> videos = List.of(
+                new Video("01", "Título 1", "----", 4.5),
                 new Video("02", "Título 2", "----", 5.5),
                 new Video("03", "Título 3", "----", 4.4),
                 new Video("04", "Título 4", "----", 3.5),
@@ -30,15 +35,12 @@ class VideoRepositoryTest {
         for ( Video video : videos ) {
             videoRepository.save( video );
         }
-
     }
-
     @Test
-    void when_FindAll_all_videos_should_be_returned_successfully() {
-        List<Video> videos = videoRepository.findAll( );
+    void when_FindAll_all_videos_should_be_returned_successfully() throws VideoNotFoundException{
+        List<Video> videos = videoRepository.findAll();
         assertEquals(6, videos.size());
     }
-
     @Test
     void when_FindByTitle_only_videos_which_contains_the_word_in_the_title_should_be_returned_successfully() {
         List<Video> videos = videoRepository.find( "Clic" );
@@ -62,5 +64,6 @@ class VideoRepositoryTest {
         List<Video> videos = videoRepository.find(1.5, 2.5);
         assertEquals(0, videos.size());
     }
-
 }
+
+
