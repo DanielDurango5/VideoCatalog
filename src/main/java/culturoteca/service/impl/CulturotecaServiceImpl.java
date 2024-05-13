@@ -31,6 +31,26 @@ public class CulturotecaServiceImpl implements CulturotecaService {
     }
 
     @Override
+    public List<Video> find(String title) throws CulturotecaException {
+        List<Video> filteredVideos = videoRepository.find(title);
+        if (filteredVideos.isEmpty()){
+            throw new VideoNotFoundException();
+        }else{
+            return filteredVideos;
+        }
+    }
+
+    @Override
+    public List<Video> find(Double fromDuration, Double toDuration) throws CulturotecaException {
+        List<Video> filteredVideos = videoRepository.find(fromDuration, toDuration);
+        if (filteredVideos.isEmpty()) {
+            throw new VideoNotFoundException();
+        } else {
+            return filteredVideos;
+        }
+    }
+
+    @Override
     public Video add(Video video) {
         return videoRepository.save(video);
     }
@@ -39,4 +59,6 @@ public class CulturotecaServiceImpl implements CulturotecaService {
     public View add(View view) {
         return viewsRepository.save(view);
     }
-}
+    }
+
+

@@ -16,7 +16,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class FindAllServiceTest {
+public class VideoFindAllServiceTest {
 
     private CulturotecaService culturotecaService;
 
@@ -53,5 +53,5 @@ public class FindAllServiceTest {
         VideoNotFoundException videoNotFoundException = assertThrows(VideoNotFoundException.class, () ->{
             culturotecaService.findAllVideos();
     });
-}
+    }
 }
