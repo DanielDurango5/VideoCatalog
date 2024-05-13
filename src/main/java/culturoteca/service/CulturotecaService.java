@@ -8,6 +8,11 @@ import java.util.List;
 
 public interface CulturotecaService {
     List<Video> findAllVideos() throws CulturotecaException;
+
+    List<Video> find(String title) throws CulturotecaException;
+
+    List<Video> find(Double fromDuration, Double toDuration) throws CulturotecaException;
+
     Video add (Video video);
     View add (View view);
 
