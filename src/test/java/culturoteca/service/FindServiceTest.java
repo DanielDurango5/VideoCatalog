@@ -5,9 +5,8 @@ import culturoteca.exception.VideoNotFoundException;
 import culturoteca.model.Video;
 import culturoteca.repository.VideoRepository;
 import culturoteca.repository.ViewsRepository;
-import culturoteca.repository.impl.VideoRepositoryImpl;
 import culturoteca.repository.impl.ViewsRepositoryImpl;
-import culturoteca.service.impl.CulturotecaServiceImpl;
+import culturoteca.service.impl.CultureMediaServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -19,8 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.doReturn;
 
 public class FindServiceTest {
-    private CulturotecaService culturotecaService;
-    private VideoRepository videoRepository = Mockito.mock();
+    private CultureMediaService culturotecaService;
+    private final VideoRepository videoRepository = Mockito.mock();
 
      Video newVideo1 = new Video("01", "Título 1", "----", 4.5);
      Video newVideo2  = new Video("02", "Título 2", "----", 5.5);
@@ -32,7 +31,7 @@ public class FindServiceTest {
     @BeforeEach
     void unit(){
         ViewsRepository viewsRepository = new ViewsRepositoryImpl();
-        culturotecaService = new CulturotecaServiceImpl(videoRepository, viewsRepository);
+        culturotecaService = new CultureMediaServiceImpl(videoRepository, viewsRepository);
     }
 
 

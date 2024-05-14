@@ -7,7 +7,7 @@ import culturoteca.repository.VideoRepository;
 import culturoteca.repository.ViewsRepository;
 import culturoteca.repository.impl.VideoRepositoryImpl;
 import culturoteca.repository.impl.ViewsRepositoryImpl;
-import culturoteca.service.impl.CulturotecaServiceImpl;
+import culturoteca.service.impl.CultureMediaServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -18,13 +18,13 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class VideoFindAllServiceTest {
 
-    private CulturotecaService culturotecaService;
+    private CultureMediaService culturotecaService;
 
     @BeforeEach
     void init(){
         VideoRepository videoRepository = new VideoRepositoryImpl();
         ViewsRepository viewsRepository = new ViewsRepositoryImpl();
-        culturotecaService = new CulturotecaServiceImpl(videoRepository, viewsRepository);
+        culturotecaService = new CultureMediaServiceImpl(videoRepository, viewsRepository);
     }
 
     private void listVideos(){
