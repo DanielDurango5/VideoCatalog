@@ -6,15 +6,15 @@ import culturoteca.model.Video;
 import culturoteca.model.View;
 import culturoteca.repository.VideoRepository;
 import culturoteca.repository.ViewsRepository;
-import culturoteca.service.CulturotecaService;
+import culturoteca.service.CultureMediaService;
 
 import java.util.List;
 
-public class CulturotecaServiceImpl implements CulturotecaService {
+public class CultureMediaServiceImpl implements CultureMediaService {
     VideoRepository videoRepository;
     ViewsRepository viewsRepository;
 
-    public CulturotecaServiceImpl(VideoRepository videoRepository, ViewsRepository viewsRepository) {
+    public CultureMediaServiceImpl(VideoRepository videoRepository, ViewsRepository viewsRepository) {
 
         this.videoRepository = videoRepository;
         this.viewsRepository = viewsRepository;

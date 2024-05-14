@@ -1,12 +1,8 @@
 package culturoteca.repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import culturoteca.exception.VideoNotFoundException;
-import culturoteca.repository.impl.ViewsRepositoryImpl;
-import culturoteca.service.CulturotecaService;
-import culturoteca.service.impl.CulturotecaServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

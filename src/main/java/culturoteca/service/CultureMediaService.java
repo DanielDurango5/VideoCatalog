@@ -6,7 +6,7 @@ import culturoteca.model.View;
 
 import java.util.List;
 
-public interface CulturotecaService {
+public interface CultureMediaService {
     List<Video> findAllVideos() throws CulturotecaException;
 
     List<Video> find(String title) throws CulturotecaException;
