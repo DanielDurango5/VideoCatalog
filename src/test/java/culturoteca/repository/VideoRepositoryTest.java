@@ -10,7 +10,6 @@ import culturoteca.model.Video;
 import culturoteca.repository.impl.VideoRepositoryImpl;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class VideoRepositoryTest {
 
