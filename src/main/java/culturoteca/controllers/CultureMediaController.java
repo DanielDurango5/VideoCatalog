@@ -39,8 +39,9 @@ public class CultureMediaController {
                     .body(Collections.emptyList());
         }
     }
-    @PostMapping
+
+    @PostMapping("/videos")
     public Video addVideo(@RequestBody Video video){
-        return cultureMediaService.add( video );
+        return cultureMediaService.add(video);
     }
 }
