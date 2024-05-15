@@ -42,7 +42,7 @@ public class VideoFindAllServiceTest {
     @Test
     void when_FindAll_all_videos_should_be_returned_successfully() throws CulturotecaException {
         init();
-        List<Video> videos = cultureMediaService.findAllVideos();
+        List<Video> videos = cultureMediaService.findAll();
         assertEquals(6, videos.size());
     }
 
@@ -50,7 +50,7 @@ public class VideoFindAllServiceTest {
     void when_FindAll_does_not_find_any_video_an_VideoNotFoundException_should_be_thrown_successfully() {
         when(videoRepository.findAll()).thenReturn(List.of());
         VideoNotFoundException videoNotFoundException = assertThrows(VideoNotFoundException.class, () -> {
-            cultureMediaService.findAllVideos();
+            cultureMediaService.findAll();
         });
         assertEquals("Video not found", videoNotFoundException.getMessage());
     }
