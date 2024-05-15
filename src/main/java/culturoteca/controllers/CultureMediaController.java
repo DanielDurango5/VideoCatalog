@@ -29,7 +29,7 @@ public class CultureMediaController {
         this.cultureMediaService = new CultureMediaServiceImpl(new VideoRepositoryImpl(), new ViewsRepositoryImpl());
     }
 
-    @GetMapping("/video")
+    @GetMapping("/videos")
     public ResponseEntity<List<Video>> findAllVideos() {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(cultureMediaService.findAll());
