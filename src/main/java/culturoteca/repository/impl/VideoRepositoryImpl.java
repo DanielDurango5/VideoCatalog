@@ -38,7 +38,7 @@ public class VideoRepositoryImpl implements VideoRepository {
     }
     @Override
     public List<Video> find(Double fromDuration, Double toDuration) {
-        List<Video> filteredVideos = new ArrayList<Video>();
+        List<Video> filteredVideos = new ArrayList<>();
         for ( Video video : videos ) {
             if(video.duration()>= fromDuration && video.duration()<= toDuration){
                 filteredVideos.add(video);
